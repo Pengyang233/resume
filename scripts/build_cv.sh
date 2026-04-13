@@ -12,10 +12,12 @@ fi
 
 case "${THEME}" in
   classic)
-    THEME_CSS="styles/classic/vscode.css"
+    THEME_SOURCE_CSS="styles/classic/vscode.css"
+    THEME_BUNDLE_CSS="styles/lapis-cv.css"
     ;;
   serif)
-    THEME_CSS="styles/serif/vscode.css"
+    THEME_SOURCE_CSS="styles/serif/vscode.css"
+    THEME_BUNDLE_CSS="styles/lapis-cv-serif.css"
     ;;
   *)
     echo "Unsupported theme: ${THEME} (expected: classic|serif)" >&2
@@ -24,11 +26,10 @@ case "${THEME}" in
 esac
 
 rm -rf "${OUT_DIR}"
-mkdir -p "${OUT_DIR}/styles/classic" "${OUT_DIR}/styles/serif" "${OUT_DIR}/fonts"
+mkdir -p "${OUT_DIR}/styles" "${OUT_DIR}/fonts"
 
-cp styles/main.css "${OUT_DIR}/styles/main.css"
-cp styles/classic/vscode.css "${OUT_DIR}/styles/classic/vscode.css"
-cp styles/serif/vscode.css "${OUT_DIR}/styles/serif/vscode.css"
+# Match the original VSCode packaging shape so font-face ../fonts resolves correctly.
+cat styles/main.css "${THEME_SOURCE_CSS}" > "${OUT_DIR}/${THEME_BUNDLE_CSS}"
 cp -R fonts/. "${OUT_DIR}/fonts/"
 
 pandoc "${INPUT_MD}" \
@@ -36,8 +37,7 @@ pandoc "${INPUT_MD}" \
   --to=html5 \
   --standalone \
   --metadata pagetitle="Resume" \
-  --css "styles/main.css" \
-  --css "${THEME_CSS}" \
+  --css "${THEME_BUNDLE_CSS}" \
   --output "${OUT_DIR}/index.html"
 
 echo "Built ${OUT_DIR}/index.html with theme=${THEME}"
