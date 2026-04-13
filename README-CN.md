@@ -240,6 +240,19 @@
 
 </details>
 
+## Cloudflare Pages 部署（私有仓库）
+
+本仓库已包含自动构建工作流 `.github/workflows/build-pages.yml`：
+
+1. 编辑 `resume.md`（默认已由 `templates/vscode/template-cn.md` 初始化）。
+2. 推送到 `main` 分支后，GitHub Actions 会自动构建静态站点并发布到 `pages` 分支。
+3. 在 Cloudflare Pages 里连接该私有仓库，选择：
+   - Production branch: `pages`
+   - Build command: 留空（无需构建）
+   - Build output directory: `/`
+
+工作流构建脚本是 `scripts/build_cv.sh`，默认输出 `site/index.html`，并复用 VSCode 主题样式（Classic）。
+
 ## 参与贡献
 
 欢迎通过 [Issues](https://github.com/BingyanStudio/LapisCV/issues) 提交建议或通过 [Pull Request](https://github.com/BingyanStudio/LapisCV/pulls) 参与开发！
