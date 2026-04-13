@@ -30,6 +30,7 @@ mkdir -p "${OUT_DIR}/styles" "${OUT_DIR}/fonts"
 
 # Match the original VSCode packaging shape so font-face ../fonts resolves correctly.
 cat styles/main.css "${THEME_SOURCE_CSS}" > "${OUT_DIR}/${THEME_BUNDLE_CSS}"
+cp styles/web.css "${OUT_DIR}/styles/web.css"
 cp -R fonts/. "${OUT_DIR}/fonts/"
 
 pandoc "${INPUT_MD}" \
@@ -38,6 +39,7 @@ pandoc "${INPUT_MD}" \
   --standalone \
   --metadata pagetitle="Resume" \
   --css "${THEME_BUNDLE_CSS}" \
+  --css "styles/web.css" \
   --output "${OUT_DIR}/index.html"
 
 echo "Built ${OUT_DIR}/index.html with theme=${THEME}"
