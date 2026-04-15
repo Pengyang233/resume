@@ -25,43 +25,37 @@
     <p>2023.10 - 至今 （~2年零6个月）</p>
 </div>
 
-## &#xe635; 项目经历
+## &#xe635; 核心项目经历
 
 <div class="entry-title">
-    <h3>云侧RAW/RGB文字复原（项目负责人）</h3>
-    <a href="https://github.com/YiNNx/cmd-wrapped">github.com/octocat/gitflix</a>
+    <h3>基于生成式架构的文字场景图像复原系统</h3>
 </div>
-
-<任务描述>
-- 结合 PaddleOCR 项目，利用 VLM 搭建 RGB 数据集处理/生成流水线，稳定生成百万级数据
-- 结合 XRestormer 模型完成任务
-- 演进至基于 Diffusion 算法架构，利用 JiT 框架从 0 训练
+项目职责： 针对手机端极端退化场景下的文字图像，主导从数据闭环和算法研发的全流程。
+- 架构演进： 放弃传统的弱控制方案，采用 JiT 方案，引入 Text Prior（Bbox & Glyphmap） 作为像素级强约束，解决了生成式模型在极低质量输入下易产生的语义幻觉与乱码问题。
+- 数据处理流水线： 构建基于 VLM 的多模态评价与清洗流水线。利用 VLM 对生成/实采/开源数据进行纹理真实性、清晰度量化、文字可读性评分，结合相关合理先验，实现高质 Patch 自动化落盘，显著提升模型泛化上限。
+- 工程化产出： 成功跑通基于 Large-scale VLM 的数据自动闭环逻辑。系统支持 4K 高清图像输入，单张推理耗时稳定在 4s 左右，复原后使后端 OCR 识别准确率显著提升 [XX]%。
 
 <div class="entry-title">
-    <h3>新型 Pattern Seneor 原型验证（主要参与者）</h3>
+    <h3>下一代新型 CFA 原型验证与复原算法</h3>
 </div>
-
-<任务描述>
+项目职责： 作为算法方向负责人，协同硬件部门完成新型异构 Sensor 的规格定义与性能仿真。
 - 推算不同 Pattern Sensor 在通用场景上的表现，包括颜色、清晰度、白平衡等
-- 以 RGGB 为基准，设计并验证新型 Pattern 下的算法处理仿真流程
-- 基于特定 Pattern 设计 RGB2RAW 的数据退化流程，构建特定 Sensor RAW 的仿真数据集
-- 设计算法流程、训练架构，完成模型训练
+- JDD 算法： 针对异构排列设计 JDD 算法，通过端到端训练规避传统 ISP 分步处理导致的信号丢失，实测在全场景下线对可分度提升 10%。
+- 性能平衡： 深入分析暗光信噪比增益与白天清晰度损失的边界，通过算法补偿硬件缺陷，实现了跨代际的暗光画质突破。
 
 <div class="entry-title">
-    <h3>端到端去噪去马赛克算法开发</h3>
+    <h3> RAW 域 JDD 算法交付与维护</h3>
 </div>
-
-<任务描述>
-- 处理不同 Pattern 输入作为算法输入，如 Quad 和 Bayer
-- Sensor 噪声标定与数据退化
-- 设计算法流程、训练架构，完成模型训练
+项目职责： 负责自研深度学习 JDD 模型在多款量产机型上的适配与性能优化。
+- 物理噪声建模： 采用 Gaussian-Poisson 模型对多款 Sensor 进行噪声标定，建立标准化的 Noise Profile 自动化生成流程，大幅缩短新器件算法适配周期。
+- 画质问题攻坚： 针对暗区涂抹、伪纹理、色阶断层等高频 PQ 问题，引入亮度自适应退化策略（Luminance-aware Augmentation），实现问题单闭环。
 
 ## &#xecfa; 专业技能
 
-- 熟练使用 Claude Code & Codex 等 AI CLI 工具，以及相关 AI IDE，如 Antigravity。
-- 熟悉 Pytorch, Python, 实验管理包 Hydra 
+- 实验管理：熟练运用 Hydra/OmegaConf 进行超参空间管理，通过集成实验追踪工具（Aim）构建可溯源、可复现的算法研发矩阵。
+- AI 提效/辅助开发：在实际业务中深度集成 Claude Code / Codex 等 AI CLI 工具，探索并沉淀一套**“AI 驱动的单元测试生成 + 复杂算子逻辑纠偏”**的工作流。
 
 ## &#xe603; 业余兴趣 & AI 技能
-- 热爱 AI，利用 AI 改造生活，部署 Openclaw / Hermas，利用 Skill 能力。
+- Agentic Workflow 探索：基于 OpenClaw 等框架构建个人自动化工作流，通过自定义 Skill 集实现自动化。
 - 驯服 AI，改造 AI 更好的服务自己，熟悉&实践 Harness Engineering。
   
