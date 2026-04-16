@@ -80,6 +80,7 @@
 ## &#xe638; 论文
 
 <div class="pub-list">
+    
 - **P. Zhao**, S. Zhao, L. Chen, W. Yang, and Q. Liao, "Exploiting Multi-perspective Driven Hierarchical Content-Aware Network for Finger Vein Verification," *IEEE Trans. Circuits Syst. Video Technol.*, vol. 32, no. 11, pp. 7938-7950, Nov. 2022.
 - **P. Zhao**, S. Zhao, J.-H. Xue, W. Yang, and Q. Liao, "The Neglected Background Cues Can Facilitate Finger Vein Recognition," *Pattern Recognit.*, vol. 136, Art. no. 109199, Nov. 2022.
 - **P. Zhao**, Z. Chen, J. Feng et al., "Single-Sample Finger Vein Recognition via Competitive and Progressive Sparse Representation," *IEEE Trans. Biometrics, Behavior, Identity Sci.*, vol. 5, no. 2, pp. 209-220, Apr. 2023.
@@ -88,6 +89,7 @@
 - S. Zhao, J. Wu, L. Fei, B. Zhang, and **P. Zhao**, "Double-cohesion learning based multiview and discriminant palmprint recognition," *Inf. Fusion*, vols. 83-84, pp. 96-109, 2022.
 - S. Zhao, J. Wen, L. Fei, B. Zhang, **P. Zhao**, and S. Li, "Structure Suture Learning Based Robust Multi-View Palmprint Recognition," *IEEE Trans. Neural Netw. Learn. Syst.*, 2022.
 - S. Zhao, J. Wu, B. Zhang, L. Fei, S. Li, and **P. Zhao**, "Adaptive Graph Embedded Preserving Projection Learning for Feature Extraction and Selection," *IEEE Trans. Syst., Man, Cybern., Syst.*, vol. 53, no. 2, pp. 1060-1073, Feb. 2023.
+- 
 </div>
 
   
