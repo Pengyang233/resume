@@ -204,6 +204,12 @@ div[alt="entry-title"] {
     align-items: center;
 }
 
+.project-duty {
+    font-size: calc(var(--text-size) - 0.3pt);
+    line-height: 1.6;
+    margin-bottom: 0.5mm;
+}
+
 .icon,
 span[alt="icon"] {
     color: var(--color-accent);
