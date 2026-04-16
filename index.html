@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Resume</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="styles/lapis-cv.css" />
+  <link rel="stylesheet" href="styles/web.css" />
+</head>
+<body>
+<h1 id="赵鹏阳">赵鹏阳</h1>
+<blockquote>
+<p><span class="icon"></span> <code>北京</code>  
+<span class="icon"></span> <code>15330050984</code>  
+<span class="icon"></span> <code>pengyang.zhao@foxmail.com</code>  </p>
+</blockquote>
+<img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4">
+
+<h2 id="-个人概述"> 个人概述</h2>
+<p>清华大学电子工程系博士，研究方向为计算机视觉与生物识别；具备生成式图像复原、计算摄影、RAW
+域画质优化与端侧算法落地经验。现任荣耀高级算法工程师，长期负责手机影像核心算法研发，覆盖算法设计、数据闭环、跨部门协同与量产交付。</p>
+<h2 id="-教育经历"> 教育经历</h2>
+<div class="entry-title">
+    <h3>清华大学 - 博士 - 电子工程系</h3> 
+    <p>2017.09 - 2023.10</p>
+</div>
+
+<p>研究方向：计算机视觉、生物识别</p>
+<div class="entry-title">
+    <h3>吉林大学 - 学士 - 信息工程</h3> 
+    <p>2013.09 - 2017.06</p>
+</div>
+
+<h2 id="-工作经验"> 工作经验</h2>
+<div alt="entry-title">
+    <h3>高级算法工程师 - 荣耀终端有限责任公司</h3> 
+    <p>2023.10 - 至今 （~2年零6个月）</p>
+</div>
+
+<p>负责手机影像相关算法预研与落地，重点方向包括文字场景图像复原、异构
+CFA 复原算法、RAW 域联合去噪去马赛克(JDD)算法交付与多机型画质优化。</p>
+<h2 id="-核心项目经历"> 核心项目经历</h2>
+<div class="entry-title">
+    <h3>基于生成式架构的文字场景图像复原系统</h3>
+</div>
+<p class="project-duty">项目职责： 针对手机端极端退化场景下的文字图像，主导从数据闭环和算法研发的全流程。</p>
+
+<ul>
+<li>架构演进： 放弃传统的弱控制方案，采用 JiT 方案，引入 Text
+Prior（Bbox &amp; Glyphmap）
+作为像素级强约束，解决了生成式模型在极低质量输入下易产生的语义幻觉与乱码问题。</li>
+<li>数据处理流水线： 构建基于 VLM 的多模态评价与清洗流水线。利用 VLM
+对生成/实采/开源数据进行纹理真实性、清晰度量化、文字可读性评分，结合相关合理先验，实现高质
+Patch 自动化落盘，显著提升模型泛化上限。</li>
+<li>工程化产出： 成功跑通基于 Large-scale VLM
+的数据自动闭环逻辑。系统支持 4K 高清图像输入，单张推理耗时稳定在 4s
+左右，复原后使后端 OCR 识别准确率显著提升 [XX]%。</li>
+</ul>
+<div class="entry-title">
+    <h3>下一代新型 CFA 原型验证与复原算法</h3>
+</div>
+<p class="project-duty">项目职责： 作为算法方向负责人，协同硬件部门完成新型异构 Sensor 的规格定义与性能仿真。</p>
+
+<ul>
+<li>推算不同 Pattern Sensor
+在通用场景上的表现，包括颜色、清晰度、白平衡等</li>
+<li>JDD 算法： 针对异构排列设计 JDD 算法，通过端到端训练规避传统 ISP
+分步处理导致的信号丢失，实测在全场景下线对可分度提升 10%。</li>
+<li>性能平衡：
+深入分析暗光信噪比增益与白天清晰度损失的边界，通过算法补偿硬件缺陷，实现了跨代际的暗光画质突破。</li>
+</ul>
+<div class="entry-title">
+    <h3> RAW 域 JDD 算法交付与维护</h3>
+</div>
+<p class="project-duty">项目职责： 负责自研深度学习 JDD 模型在多款量产机型上的适配与性能优化。</p>
+
+<ul>
+<li>物理噪声建模： 采用 Gaussian-Poisson 模型对多款 Sensor
+进行噪声标定，建立标准化的 Noise Profile
+自动化生成流程，大幅缩短新器件算法适配周期。</li>
+<li>画质问题攻坚： 针对暗区涂抹、伪纹理、色阶断层等高频 PQ
+问题，引入亮度自适应退化策略进行有效优化，完成问题闭环。</li>
+</ul>
+<h2 id="-专业技能"> 专业技能</h2>
+<ul>
+<li>算法方向：计算机视觉、图像复原、生成式视觉算法、计算摄影、RAW
+域画质优化、生物识别。</li>
+<li>研发方法：使用 Hydra / OmegaConf 进行实验配置管理，结合 Aim
+等工具构建可追踪、可复现的算法研发流程。</li>
+<li>AI 提效/辅助开发：在实际业务中深度集成 Claude Code / Codex /
+Antigravity 等 AI 工具，并能够基于 Agentic Tools 其设计思想合理设计
+CLAUDE.md/AGENTS.md 进行项目管理与 Skills 提效。</li>
+<li>英语能力:
+通过大学英语四六级考试；具备良好的英语听说读写能力，能够快速浏览英文文献和书籍。</li>
+</ul>
+<h2 id="-荣誉奖励"> 荣誉奖励</h2>
+<ul>
+<li>荣耀 2024 年度微光者、荣耀知识之星</li>
+<li>国家奖学金、奇虎 360 奖学金、三星奖学金</li>
+<li>校优秀学生干部、校优秀学生、校级国奖励学标兵</li>
+</ul>
+<h2 id="-论文"> 论文</h2>
+<p>发表与参与论文 7 篇，其中一作 3
+篇，研究方向聚焦生物识别与图像复原。</p>
+<div class="pub-list">
+
+<ul>
+<li><strong>P. Zhao</strong>, S. Zhao, L. Chen, W. Yang, and Q. Liao,
+"Exploiting Multi-perspective Driven Hierarchical Content-Aware Network
+for Finger Vein Verification," <em>IEEE Trans. Circuits Syst. Video
+Technol.</em>, vol. 32, no. 11, pp. 7938-7950, Nov. 2022.</li>
+<li><strong>P. Zhao</strong>, S. Zhao, J.-H. Xue, W. Yang, and Q. Liao,
+"The Neglected Background Cues Can Facilitate Finger Vein Recognition,"
+<em>Pattern Recognit.</em>, vol. 136, Art. no. 109199, Nov. 2022.</li>
+<li><strong>P. Zhao</strong>, Z. Chen, J. Feng et al., "Single-Sample
+Finger Vein Recognition via Competitive and Progressive Sparse
+Representation," <em>IEEE Trans. Biometrics, Behavior, Identity
+Sci.</em>, vol. 5, no. 2, pp. 209-220, Apr. 2023.</li>
+<li>Y. Song, <strong>P. Zhao</strong>, W. Yang, J. Zhou, and Q. Liao,
+"EIFNet: An Explicit and Implicit Feature Fusion Network for Finger Vein
+Verification," <em>IEEE Trans. Circuits Syst. Video Technol.</em>, vol.
+33, no. 5, pp. 2520-2532, May 2023.</li>
+<li>Q. Bao, R. Zhu, B. Gang, <strong>P. Zhao</strong>, W. Yang, and M.
+Qing, "Distilling Resolution-robust Identity Knowledge for
+Texture-Enhanced Face Hallucination," in <em>Proc. 30th ACM Int. Conf.
+Multimedia</em>, 2022.</li>
+<li>S. Zhao, J. Wen, L. Fei, B. Zhang, <strong>P. Zhao</strong>, and S.
+Li, "Structure Suture Learning Based Robust Multi-View Palmprint
+Recognition," <em>IEEE Trans. Neural Netw. Learn. Syst.</em>, 2022.</li>
+<li>S. Zhao, J. Wu, B. Zhang, L. Fei, S. Li, and <strong>P.
+Zhao</strong>, "Adaptive Graph Embedded Preserving Projection Learning
+for Feature Extraction and Selection," <em>IEEE Trans. Syst., Man,
+Cybern., Syst.</em>, vol. 53, no. 2, pp. 1060-1073, Feb. 2023.</li>
+</ul>
+</div>
+</body>
+</html>
