@@ -210,6 +210,14 @@ div[alt="entry-title"] {
     margin-bottom: 0.5mm;
 }
 
+.pub-list li {
+    text-align: justify;
+    text-justify: inter-ideograph;
+    text-align-last: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .icon,
 span[alt="icon"] {
     color: var(--color-accent);
