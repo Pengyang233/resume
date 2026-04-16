@@ -2,7 +2,9 @@
 
 > <span class="icon">&#xe60f;</span> `15330050984`&emsp;&emsp;
 > <span class="icon">&#xe7ca;</span> `pengyang.zhao@foxmail.com`&emsp;&emsp;
+> <span class="icon">&#xe8b4;</span> `31岁`&emsp;&emsp;
 > <span class="icon">&#xe8ae;</span> `北京`&emsp;&emsp;
+
 
 <img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4">
 
@@ -64,10 +66,16 @@
 
 - 实验管理：熟练运用 Hydra/OmegaConf 进行超参空间管理，通过集成实验追踪工具（Aim）构建可溯源、可复现的算法研发矩阵。
 - AI 提效/辅助开发：在实际业务中深度集成 Claude Code / Codex 等 AI CLI 工具，探索并沉淀一套**“AI 驱动的单元测试生成 + 复杂算子逻辑纠偏”**的工作流。
+- 英语水平: 通过大学英语四六级考试；具备良好的英语听说读写能力，能够快速浏览英文文献和书籍。
 
 ## &#xe603; 业余兴趣 & AI 技能
 - Agentic Workflow 探索：基于 OpenClaw 等框架构建个人自动化工作流，通过自定义 Skill 集实现自动化。
 - 驯服 AI，改造 AI 更好的服务自己，熟悉&实践 Harness Engineering。
+
+## &#xe782; 荣誉奖励
+- 奖学金：国家奖学金、“奇虎360”奖学金、三星奖学金等
+- 个人荣誉：荣耀2024年度微光者、荣耀知识之星、校优秀学生干部、校优秀学生、校级国奖励学标兵等
+
 
 ## &#xe638; 论文
 
