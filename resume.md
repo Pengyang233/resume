@@ -87,7 +87,8 @@
 - Q. Bao, R. Zhu, B. Gang, **P. Zhao**, W. Yang, and M. Qing, "Distilling Resolution-robust Identity Knowledge for Texture-Enhanced Face Hallucination," in *Proc. 30th ACM Int. Conf. Multimedia*, 2022.
 - S. Zhao, J. Wen, L. Fei, B. Zhang, **P. Zhao**, and S. Li, "Structure Suture Learning Based Robust Multi-View Palmprint Recognition," *IEEE Trans. Neural Netw. Learn. Syst.*, 2022.
 - S. Zhao, J. Wu, B. Zhang, L. Fei, S. Li, and **P. Zhao**, "Adaptive Graph Embedded Preserving Projection Learning for Feature Extraction and Selection," *IEEE Trans. Syst., Man, Cybern., Syst.*, vol. 53, no. 2, pp. 1060-1073, Feb. 2023.
-- 
+
+
 </div>
 
   
